@@ -1,0 +1,56 @@
+RetroGameMachine
+================
+
+collection of retro games with a interactive menu to play them.
+
+This allows you to select what console you want to use
+and then lists the roms/games with a selection for what
+one you want to play.
+
+mainly for use with cli based emulators to make it easier
+but it has a few gui based, but interactive menu loads the roms
+the same way (skipping the need to file > load > rom)
+
+BEFORE YOU DOWNLOAD !
+=====================
+
+you need the dependency list :)
+
+-  i will update this after i finished a script
+-  so dont download yet unless you want to do it manually
+
+HOW TO INSTALL
+=====================
+
+sudo mkdir /media/Games
+sudo chmod 777 /media/Games
+git clone git://github.com/justsueme/RetroGameMachine.git /media/Games
+cd /media/Games
+sudo ./INSTALL
+
+=================
+
+You DONT need root to play games or to run the menu.
+Root is used to install only
+
+the reason i thought /media/Games was the best place to keep
+this, was 1) its out of the way, not adding clutter to your home folder  2) in case you want a whole hdd for retro games you can mount it at 
+/media/Games before you grab the git.  3) because i wanted to :)
+
+
+Contact
+==========
+
+Contact me if you have update requests
+these include:
+		better emulators to use
+		roms/games to add to the list
+		consoles to add
+
+		Code you wrote yourself to improve the menu
+		but doesnt change my layout.
+
+how to contact:   Irc: Freenode #linuxdistrocommunity Dragonkeeper
+	   	Email: ryan@dropoffpoint.co.uk
+
+

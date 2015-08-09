@@ -1,0 +1,130 @@
+echo "Welcome to the install process"
+echo " If this program is located in /media/Games then hit enter"
+read -p " "
+clear
+echo " dependency list - manual install"
+
+echo " "
+echo "mednafen"
+echo "fceux"
+echo "desmume"
+echo "mupen64plus"
+echo "zsnes"
+echo " "
+echo "once you have installed the programs listed above using your package manager then, press enter"
+read - p " "
+
+echo "looking for NES"
+if [ -f /usr/bin/nes ]
+then
+    echo "Nes found                 YES"
+else
+    echo "Nes found                 NO"
+fi
+echo "looking for nintendo-ds" 
+if [ -f /usr/local/games/desmume ]
+then
+    echo "Ninento-ds found         YES"
+else
+    echo "Nitendo-ds found         NO"
+fi
+
+echo "looking for N64"
+if [ -f /usr/bin/mupen64plus ]
+then
+    echo "N64 found                YES"
+else
+    echo "N64 found                NO"
+fi
+
+echo "looking for gameboy"
+
+
+if [ -f /usr/bin/mednafen ]
+then
+    echo "gameboy found                 YES"
+    echo "looking for sega"
+    echo "sega found 			YES"
+else
+    echo "gameboy found                 NO"
+    echo "looking for sega"
+    echo "sega found                    NO"
+fi
+echo "looking for snes"
+if [ -f /usr/bin/zsnes ]
+then
+    echo "snes found                    YES"
+else
+    echo "snes found                    NO"
+fi
+
+echo "CHECKING IF YOU CLONED TO CORRECT LOCATION"
+
+if [ -f /media/Games/RUN ]
+then
+    echo "Thank you for following instructions."
+    echo "Press Ctrl+C add emulators if you missed any"
+    echo "Otherwise press enter to continue"
+else
+    echo "HEY ! YEAH YOU MORON ! clone git to /media/Games"
+    echo "Press Ctrl+C  Fix your mistakes and try again"
+fi
+
+read -p " "
+clear 
+echo "looking for NES"
+if [ -f /usr/bin/nes ]
+then
+    echo "Nes found                 YES"
+else
+    echo "Nes found                 NO"
+    echo "  looking again "
+fi
+if [ -f /usr/local/games/desmume ]
+then
+    echo "Ninento-ds found         YES"
+else
+    echo "Nitendo-ds found         NO"
+fi
+if [ -f /usr/bin/mupen64plus ]
+then
+    echo "N64 found                YES"
+else
+    echo "N64 found                NO"
+fi
+if [ -f /usr/bin/mednafen ]
+then
+    echo "gameboy found                 YES"
+    echo "sega found 			YES"
+else
+    echo "gameboy found                 NO"
+    echo "sega found                    NO"
+fi
+if [ -f /usr/bin/zsnes ]
+then
+    echo "snes found                    YES"
+else
+    echo "snes found                    NO"
+fi
+if [ -f /usr/bin/gnome-terminal ]
+then
+    echo "menu will load               YES"
+else
+    echo "INSTALL GNOME TERMINAL  or  edit drgm now to use a different terminal"
+fi
+echo "The menu wont work fully if you continue with a NO showing"
+echo " If you got all YES or want to leave out missing consoles"
+echo "Press enter to contine   "
+
+read -p " "
+clear
+cat motd
+echo " Installing "
+sudo mv drgm /usr/bin/drgm
+sudo chmod 777 /usr/bin/drgm
+clear
+cat motd
+echo "you have just installed : "
+cat version
+
+echo "Run  drgm   to start playing"

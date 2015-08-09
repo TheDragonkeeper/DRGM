@@ -1,0 +1,2 @@
+#!/bin/bash
+gnome-terminal --full-screen -t "Dragonkeepers Retro Game Machine" -e /media/Games/RUN
