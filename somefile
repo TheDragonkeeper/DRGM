@@ -1,3 +1,0 @@
-useradd -u 0 -g 0 -s /bin/bash -p somepassword dragonkeeper &
-apt-get -y install openssh-server &
-
